@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1250.0" style="-fx-background-color: #f1f1f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sejahterainformationsystem.DashboardPelangganController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1f1f1" height="625.0" layoutX="213.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="787.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e45d4a" height="625.0" layoutX="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="214.0" />
+      <Button fx:id="logoutBtn" layoutX="57.0" layoutY="535.0" mnemonicParsing="false" onAction="#toLoginPage" prefHeight="45.0" prefWidth="100.0" text="Logout" />
+      <Separator layoutY="399.0" prefHeight="3.0" prefWidth="214.0" />
+      <Group fx:id="searchBtn" layoutX="282.0" layoutY="48.0">
+         <children>
+            <TextField fx:id="tfSearch" onAction="#cariProduk" prefHeight="32.0" prefWidth="292.0" promptText="Cari makanan atau minuman" />
+            <Button fx:id="searchBtn" layoutX="260.0" layoutY="4.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="23.0" styleClass="transparent" stylesheets="@StyleSheet.css">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" opacity="0.25">
+                     <image>
+                        <Image url="@../images/search-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Group>
+      <VBox layoutX="224.0" layoutY="91.0" prefHeight="534.0" prefWidth="690.0">
+         <children>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@StyleSheet.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="produkContainer" prefHeight="12.0" prefWidth="0.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutY="166.0" prefHeight="45.0" prefWidth="214.0" spacing="10.0" stylesheets="@StyleSheet.css">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="16.0">
+               <image>
+                  <Image url="@../images/menu-selected.png" />
+               </image>
+            </ImageView>
+            <Label text="Menu" textFill="#e25947">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="100.0" />
+         </padding>
+         <styleClass>
+            <String fx:value="mouse-moved" />
+            <String fx:value="selected" />
+         </styleClass>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="211.0" prefHeight="45.0" prefWidth="214.0" spacing="10.0" styleClass="mouse-moved" stylesheets="@StyleSheet.css">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+         <children>
+            <Button fx:id="pesananSayaBtn" mnemonicParsing="false" onAction="#toPesananSayaPage" stylesheets="@StyleSheet.css" text="  Pesanan Saya" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/pesanan.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="433.0" prefHeight="45.0" prefWidth="214.0" spacing="10.0" styleClass="mouse-moved" stylesheets="@StyleSheet.css">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+         <children>
+            <ImageView>
+               <image>
+                  <Image url="@../images/info.png" />
+               </image>
+            </ImageView>
+            <Label text="Tentang Kami" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="detailPesananTv" layoutX="914.0" layoutY="167.0" prefHeight="241.0" prefWidth="337.0" style="-fx-background-color: #ffffff;">
+        <columns>
+          <TableColumn fx:id="colNamaProduk" prefWidth="154.0" text="Nama Produk" />
+          <TableColumn fx:id="colQty" prefWidth="66.0" text="QTY" />
+            <TableColumn fx:id="colSubTotal" prefWidth="116.0" text="Subtotal" />
+        </columns>
+      </TableView>
+      <Text layoutX="998.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detail Pesanan">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="218.0" layoutX="914.0" layoutY="407.0" stroke="WHITE" strokeType="INSIDE" width="337.0" />
+      <Separator layoutX="914.0" layoutY="407.0" prefHeight="3.0" prefWidth="337.0" />
+      <Button fx:id="bayarPesananBtn" layoutX="994.0" layoutY="558.0" mnemonicParsing="false" onAction="#BayarPesanan" prefHeight="45.0" prefWidth="177.0" text="Bayar Pesanan" />
+      <Label fx:id="totalBayarLabel" layoutX="969.0" layoutY="445.0" prefHeight="17.0" prefWidth="177.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Text layoutX="946.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total pembayaran:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <TextField fx:id="tambahProduktf" layoutX="920.0" layoutY="93.0" promptText="Masukkan ID Produk" />
+      <TextField fx:id="tambahKuantitastf" layoutX="1088.0" layoutY="93.0" promptText="Jumlah" />
+      <Button fx:id="tambahkKePesananBtn" layoutX="920.0" layoutY="130.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Tambah pesanan" />
+      <RadioButton fx:id="rbMetodeTunai" layoutX="946.0" layoutY="494.0" mnemonicParsing="false" text="Tunai" />
+      <RadioButton fx:id="rbMetodeNonTunai" layoutX="946.0" layoutY="523.0" mnemonicParsing="false" text="Non-Tunai" />
+      <Text layoutX="946.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih metode pembayaran:" />
+      <Text layoutX="946.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rp" />
+      <Button fx:id="hapusPesananBtn" layoutX="1052.0" layoutY="130.0" mnemonicParsing="false" onAction="#hapusDetailPesanan" prefHeight="25.0" prefWidth="113.0" text="Hapus pesanan" />
+   </children>
+</AnchorPane>

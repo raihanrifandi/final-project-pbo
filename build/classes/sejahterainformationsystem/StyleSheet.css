@@ -1,0 +1,95 @@
+.loginBtn{
+    -fx-background-color: #E25947;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #FFF;
+    -fx-border-radius: 5px;
+}
+
+.loginBtn:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #E25947;
+    -fx-border-color: #E25947;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+}
+
+.daftarBtn{
+    -fx-background-color: #000000;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #FFF;
+    -fx-border-radius: 5px;
+}
+
+.daftarBtn:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+}
+    
+.signUpBtn{
+    -fx-background-color: #E25947;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #FFF;
+    -fx-border-radius: 5px;
+    
+}
+
+.signUpBtn:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #E25947;
+    -fx-border-color: #E25947;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+}
+
+.addToOrder{
+    -fx-background-color: #E25947;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #FFF;
+    -fx-border-radius: 5px;
+}
+
+.addToOrder:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #E25947;
+    -fx-border-color: #E25947;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+}
+
+.white-background{
+    -fx-background-color: #fff;
+    
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0), 10,0,0,10);
+}
+
+.selected{
+    -fx-background-color: #F3F3F3;
+    -fx-text-fill: #E25947;
+}
+
+.mouse-moved:hover{
+    -fx-background-color: #E4E4E4;
+}
+
+
+
+
+

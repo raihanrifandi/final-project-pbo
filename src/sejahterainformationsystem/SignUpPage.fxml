@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sejahterainformationsystem.SignUpPageController">
+   <children>
+      <ImageView fitHeight="635.0" fitWidth="471.0" layoutY="-1.0" preserveRatio="true">
+         <image>
+            <Image url="@../images/loginPageImg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="570.0" layoutY="148.0" text="Daftar Akun">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNamaLengkap" layoutX="575.0" layoutY="279.0" prefHeight="25.0" prefWidth="325.0" />
+      <TextField fx:id="tfAlamat" layoutX="575.0" layoutY="334.0" prefHeight="25.0" prefWidth="325.0" />
+      <Label layoutX="575.0" layoutY="259.0" text="Nama Lengkap">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="314.0" text="Alamat">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="369.0" text="Kata sandi">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tfPassword" layoutX="575.0" layoutY="389.0" prefHeight="25.0" prefWidth="325.0" />
+      <Button fx:id="buatAkunBtn" layoutX="575.0" layoutY="476.0" mnemonicParsing="false" onAction="#menambahkanAkun" prefHeight="45.0" prefWidth="325.0" styleClass="signUpBtn" stylesheets="@StyleSheet.css" text="Mulai pesan makanan!" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <CheckBox layoutX="575.0" layoutY="430.0" mnemonicParsing="false" />
+      <Text layoutX="607.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dengan membuat akun, artinya Anda menyetujui ">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="727.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dan">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="603.0" layoutY="440.0" text="Persyaratan Layanan Bisnis">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="742.0" layoutY="440.0" text="Kebijakan Privasi">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Text layoutX="822.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kami. ">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView layoutX="573.0" layoutY="88.0">
+         <image>
+            <Image url="@../images/backBtn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="617.0" layoutY="87.0" text="Kembali">
+         <font>
+            <Font name="Ebrima" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="573.0" layoutY="88.0" mnemonicParsing="false" onAction="#toLoginPage" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #E55E4D; -fx-border-radius: 5;" />
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="576.0" layoutY="92.0">
+         <image>
+            <Image url="@../images/arrowBack.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfUsername" layoutX="573.0" layoutY="227.0" prefHeight="25.0" prefWidth="325.0" />
+      <Label layoutX="576.0" layoutY="206.0" text="Username">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPeringatan" layoutX="575.0" layoutY="181.0" textFill="#e45d4a" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>
