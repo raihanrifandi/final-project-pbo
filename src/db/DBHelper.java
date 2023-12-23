@@ -11,7 +11,7 @@ public class DBHelper {
     
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
-    private static final String DB = "sejahtera";
+    private static final String DB = "db";
     private static final String MYCONN = "jdbc:mysql://localhost/" + DB;
     
     
